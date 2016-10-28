@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item1"
+        android:checked="true"
+        android:icon="@android:drawable/stat_notify_chat"
+        android:title="Message"/>
+
+    <item
+        android:id="@+id/item2"
+        android:icon="@android:drawable/stat_notify_error"
+        android:title="Call"/>
+
+    <item
+        android:id="@+id/item3"
+        android:icon="@android:drawable/stat_notify_more"
+        android:title="Contact"/>
+
+    <item
+        android:id="@+id/item4"
+        android:icon="@android:drawable/stat_notify_sync"
+        android:title="aaa"/>
+
+</menu>

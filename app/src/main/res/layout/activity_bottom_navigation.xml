@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.heihei.hehe.coordinatorlayout.exitUntilCollapsed.ToolbarLayoutWithParallaxActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.heihei.hehe.coordinatorlayout.exitUntilCollapsed.ToolbarLayoutWithParallaxActivity"
+        tools:showIn="@layout/activity_close_toolbar_with_parallax">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/large_text" />
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--
+     app:backgroundTint 默认填充颜色
+     app:rippleColor    点击时颜色
+     app:elevation      默认阴影大小(高度)
+     app:pressedTranslationZ 点击时阴影大小(高度)
+     app:layout_anchor  依赖目标
+     app:layout_anchorGravity 相对依赖目标的位置
+     -->
+    <!--<android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.heihei.hehe.coordinatorlayout.behavior.FloatButtonBehavior       app:layout_anchor="@id/scroll"
+        app:layout_anchorGravity="bottom|end"
+        app:backgroundTint="#fff000"
+        app:rippleColor="@color/colorAccent"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_behavior="com.heihei.hehe.coordinatorlayout.behavior.BottomNavigationBehavior"
+        app:itemBackground="@color/color_1ec859"
+        app:itemIconTint="@drawable/tab_text_color_selector"
+        app:itemTextColor="@drawable/tab_text_color_selector"
+        app:menu="@menu/menu_navigation"/>
+
+</android.support.design.widget.CoordinatorLayout>
